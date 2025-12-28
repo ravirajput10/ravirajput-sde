@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Github, Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-// import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { profileInfo } from "@/types/portfolio";
+import { ModeToggle } from "../theme/mode-toggle";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -85,7 +85,7 @@ const Navbar = () => {
             >
               <Linkedin className="w-5 h-5" />
             </a>
-            {/* <ThemeToggle /> */}
+            <ModeToggle />
             <Button size="sm" variant="outline" asChild>
               <a href={profileInfo.resumeUrl} download>
                 <Download className="w-4 h-4 mr-1" />
@@ -150,7 +150,7 @@ const Navbar = () => {
                 >
                   <Mail className="w-5 h-5" />
                 </a>
-                {/* <ThemeToggle /> */}
+                <ModeToggle />
               </div>
               <div className="flex gap-2">
                 <Button variant="outline" className="flex-1" asChild>

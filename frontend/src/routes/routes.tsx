@@ -6,8 +6,8 @@ import App from "@/App";
 const Index = lazy(() => import("@/pages/Index"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 const Auth = lazy(() => import("@/pages/Auth"));
-// const BlogDetail = lazy(() => import("@/pages/BlogDetail"));
-// const ProjectDetail = lazy(() => import("@/pages/ProjectDetail"));
+const BlogDetail = lazy(() => import("@/pages/BlogDetail"));
+const ProjectDetail = lazy(() => import("@/pages/ProjectDetail"));
 
 const AdminDashboard = lazy(() => import("@/pages/admin/Dashboard"));
 const AdminMessages = lazy(() => import("@/pages/admin/Messages"));
@@ -33,14 +33,14 @@ export const router = createBrowserRouter([
         path: "/auth",
         element: withSuspense(<Auth />),
       },
-      // {
-      //   path: "/blog/:slug",
-      //   element: withSuspense(<BlogDetail />),
-      // },
-      // {
-      //   path: "/project/:slug",
-      //   element: withSuspense(<ProjectDetail />),
-      // },
+      {
+        path: "/blog/:slug",
+        element: withSuspense(<BlogDetail />),
+      },
+      {
+        path: "/project/:slug",
+        element: withSuspense(<ProjectDetail />),
+      },
 
       /* ---------- ADMIN ROUTES ---------- */
       {

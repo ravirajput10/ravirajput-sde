@@ -5,10 +5,10 @@ import About from '@/components/sections/about';
 import Navbar from '@/components/common/navbar';
 import Footer from '@/components/common/footer';
 
-// const Projects = lazy(() => import('@/components/sections/projects'));
+const Projects = lazy(() => import('@/components/sections/projects'));
 // const Experience = lazy(() => import('@/components/sections/experience'));
 // const Testimonials = lazy(() => import('@/components/sections/testimonials'));
-// const Blog = lazy(() => import('@/components/sections/blog'));
+const Blog = lazy(() => import('@/components/sections/blog'));
 // const Contact = lazy(() => import('@/components/sections/contact'));
 
 const SectionFallback = () => (
@@ -25,7 +25,7 @@ const Index = () => {
         <Hero />
         <About />
         <Suspense fallback={<SectionFallback />}>
-          {/* <Projects /> */}
+          <Projects />
         </Suspense>
         <Suspense fallback={<SectionFallback />}>
           {/* <Experience /> */}
@@ -34,7 +34,7 @@ const Index = () => {
           {/* <Testimonials /> */}
         </Suspense>
         <Suspense fallback={<SectionFallback />}>
-          {/* <Blog /> */}
+          <Blog />
         </Suspense>
         <Suspense fallback={<SectionFallback />}>
           {/* <Contact /> */}
